@@ -21,6 +21,7 @@ function App() {
   );
   const [timeSpentIT, setTimeSpentIT] = useState(DEFAULT_TIME_SPENT_IT_VALUE);
 
+  
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(items));
   }, [items]);
@@ -55,6 +56,7 @@ function App() {
     event.preventDefault();
     addItem({ date, timeSpentEnglish, timeSpentIT });
   };
+
   return (
     <BrowserRouter>
       <Routes>
